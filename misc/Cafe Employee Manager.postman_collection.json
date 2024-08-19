@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "ee857280-eafc-48b7-9c9d-9d92e537dfd8",
+		"name": "Cafe Employee Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25570294",
+		"_collection_link": "https://ugks-development.postman.co/workspace/f69a9bb6-743f-41e4-b290-f6bc3fe4e4e4/collection/25570294-ee857280-eafc-48b7-9c9d-9d92e537dfd8?action=share&source=collection_link&creator=25570294"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Create Employee Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\": \"UI1234561\",\n    \"name\": \"Jeanny ads\",\n    \"emailAddress\": \"asda2@example.com\",\n    \"phoneNumber\": \"91234568\",\n    \"gender\": \"MALE\",\n    \"startDate\": \"2024-08-21\",\n    \"cafeName\": \"Cafe Johor Bahru\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cafe-employee/api/v1/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cafe-employee",
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\",\n    \"employeeId\": \"UI7654321\",\n    \"name\": \"Jane SmithO\",\n    \"emailAddress\": \"jane.smith@example.com\",\n    \"phoneNumber\": \"81234567\",\n    \"gender\": \"FEMALE\",\n    \"startDate\": \"2024-08-08\",\n    \"cafeName\": \"Cafe Johor Bahru\",\n    \"daysWorked\": 11\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cafe-employee/api/v1/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cafe-employee",
+								"api",
+								"v1",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cafe-employee/api/v1/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cafe-employee",
+								"api",
+								"v1",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Employee Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/cafe-employee/api/v1/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cafe-employee",
+								"api",
+								"v1",
+								"employee",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cafe",
+			"item": [
+				{
+					"name": "Create Cafe Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "postman-cloud:///1ef5d718-23b8-40c0-8f11-b2462bb60209"
+								},
+								{
+									"key": "name",
+									"value": "Cafe Johor Bahrain",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A cozy cafe...",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "123 Coffee Lanez",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/cafe-employee/api/v1/cafes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cafe-employee",
+								"api",
+								"v1",
+								"cafes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cafe Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{id}}\",\n    \"name\": \"Cafe Delight\",\n    \"description\": \"A cozy cafe...\",\n    \"logo\": \"/cafe-employee/api/v1/images/download.png\",\n    \"location\": \"123 Coffee Lane\",\n    \"employees\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cafe-employee/api/v1/cafes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cafe-employee",
+								"api",
+								"v1",
+								"cafes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cafe Data",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/cafe-employee/api/v1/cafes/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cafe-employee",
+								"api",
+								"v1",
+								"cafes",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Cafe Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/cafe-employee/api/v1/cafes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"cafe-employee",
+								"api",
+								"v1",
+								"cafes"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "123 Coffee Lane",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

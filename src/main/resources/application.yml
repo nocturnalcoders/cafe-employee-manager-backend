@@ -1,0 +1,34 @@
+server:
+  servlet:
+    context-path: /cafe-employee/api/v1
+  port: 8000
+  max-http-request-header-size: 16384
+
+spring:
+  application:
+    name: cafe-employee-manager-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/cafe-employee?serverTimezone=UTC
+    username: root
+    password: Cl100299!@
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 10
+      idle-timeout: 300000
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+common:
+  pageable:
+    size: 100
+    page: 0
+  sorting: ASC

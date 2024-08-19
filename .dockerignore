@@ -1,0 +1,25 @@
+# Ignore the target directory where Maven builds the artifacts
+target/
+
+# Ignore Maven wrapper files
+.mvn/
+mvnw
+mvnw.cmd
+
+# Ignore IDE files and directories
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Ignore local environment files
+*.env
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore files and directories related to version control
+.git/
+.gitignore

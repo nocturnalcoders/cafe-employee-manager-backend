@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    image: cafe-employee-manager-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/cafe-employee
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=Cl100299!@
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: Cl100299!@
+      MYSQL_DATABASE: cafe-employee
+    ports:
+      - "3306:3306"
